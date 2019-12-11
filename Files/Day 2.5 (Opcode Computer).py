@@ -60,3 +60,5 @@ while task_counter < segment_count:
     task_counter += 1
 
 print(ints_raw[0])
+
+#loop through the two inputs, until the value of ints_raw[0] = 19690720 
