@@ -2,11 +2,6 @@ input_range = range(165432, 707912)
 # input_range = range(111111, 123456)
 potential_passwords_list = []
 
-'''
-check ascending
-check at least one double digit
-'''
-
 
 def is_ascending(args):
     if len(args) <= 6:
