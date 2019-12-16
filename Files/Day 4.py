@@ -1,21 +1,47 @@
+from functools import reduce
 input_range = range(165432, 707912)
 # input_range = range(111111, 123456)
 potential_passwords_list = []
 
 
 def is_ascending(args):
-    n_index = 0
-    ascending = True
+
+    def ascend_check(prev, item):
+        return prev <= item
+
     if len(args) <= 6:
-        while ascending is True:
-            for n in args:
-                if args[n_index] < args[n_index + 1]:
-                    n_index += 1
-                    ascending = True
-                else:
-                    ascending = False
+        if reduce(ascend_check, args, False):
+            return True
+
+        else:
+            return False
+
     else:
         return False
+
+
+'''
+def is_ascending(args):
+    if len(args) <= 6:
+            if args[1] >= args[0]:
+                if args[2] >= args[1]:
+                    if args[3] >= args[2]:
+                        if args[4] >= args[3]:
+                            if args[5] >= args[4]:
+                                return True
+                            else:
+                                return False
+                        else:
+                            return False
+                    else:
+                        return False
+                else:
+                    return False
+            else:
+                return False
+    else:
+        return False
+'''
 
 
 def has_double(args):
