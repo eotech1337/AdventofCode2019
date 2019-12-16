@@ -7,6 +7,7 @@
     <orderEntry type="jdk" jdkName="Python 3.8 (AdventofCode2019)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="Learning_01" />
+    <orderEntry type="module" module-name="Learning_02" />
   </component>
   <component name="TestRunnerService">
     <option name="PROJECT_TEST_RUNNER" value="Unittests" />

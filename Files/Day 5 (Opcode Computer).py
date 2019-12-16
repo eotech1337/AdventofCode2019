@@ -12,7 +12,7 @@ to do...
 - rework segment count method (partly done)
 '''
 
-ints_raw = [3,0,4,0]
+ints_raw = [3, 0, 4, 0]
 start_index = 0
 segment_count = len(ints_raw)
 task_counter = 0
@@ -69,9 +69,11 @@ def segment_splitter():
         return opcodes
     elif ints_raw[start_index] == 3:
         opcodes = ints_raw[int(start_index):int(start_index + 2)]
+        print(opcodes)
         return opcodes
     elif ints_raw[start_index] == 4:
         opcodes = ints_raw[int(start_index):int(start_index + 2)]
+        print(opcodes)
         return opcodes
 
 
@@ -96,11 +98,12 @@ while task_counter < segment_count:
     try:
         check_opcode(segment_splitter())
     except IndexError:
-        break
+        print('Program Finished.')
     if len(segment_splitter()) == 2:
         start_index += 2
     elif len(segment_splitter()) == 4:
         start_index += 4
     task_counter += 1
 
-# currently only out puts on input of 3 or 4, fuck knows why.
+
+# currently only out puts on input of 3 or 4. issue is somewhere in segment splitter or main while loop at bottom.

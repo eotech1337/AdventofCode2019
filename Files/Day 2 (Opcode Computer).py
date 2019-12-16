@@ -51,8 +51,9 @@ def check_opcode(segment):
 
 
 # "before running the program, replace position 1 with the value 12 and replace position 2 with the value 2."
-ints_raw[1] = 95
-ints_raw[2] = 7
+ints_raw[1] = 12
+ints_raw[2] = 2
+
 
 while task_counter < segment_count:
     check_opcode(segment_splitter())

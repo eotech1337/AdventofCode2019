@@ -4,23 +4,16 @@ potential_passwords_list = []
 
 
 def is_ascending(args):
+    n_index = 0
+    ascending = True
     if len(args) <= 6:
-            if args[1] >= args[0]:
-                if args[2] >= args[1]:
-                    if args[3] >= args[2]:
-                        if args[4] >= args[3]:
-                            if args[5] >= args[4]:
-                                return True
-                            else:
-                                return False
-                        else:
-                            return False
-                    else:
-                        return False
+        while ascending is True:
+            for n in args:
+                if args[n_index] < args[n_index + 1]:
+                    n_index += 1
+                    ascending = True
                 else:
-                    return False
-            else:
-                return False
+                    ascending = False
     else:
         return False
 
