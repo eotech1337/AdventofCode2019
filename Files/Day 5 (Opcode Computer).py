@@ -106,4 +106,4 @@ while task_counter < segment_count:
     task_counter += 1
 
 
-# currently only out puts on input of 3 or 4. issue is somewhere in segment splitter or main while loop at bottom.
+# currently only outputs on input of 3 or 4. issue is somewhere in segment splitter or main while loop at bottom.
